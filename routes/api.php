@@ -32,7 +32,7 @@ Route::middleware(['auth:sanctum', Admin::class])
     ->group(function () {
 
         Route::apiResource('/admin/users', UserController::class);
-        Route::get('/admin/products', [ProductController::class, 'index']); 
+        Route::get('/admin/products', [ProductController::class, 'productBasket']); 
     });
 Route::get('baskets', [BasketController::class, 'index']);
 Route::get('baskets/{user_id}/{item_id}', [BasketController::class, 'show']);

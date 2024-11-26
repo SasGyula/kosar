@@ -18,5 +18,9 @@ class Basket extends Model
 
         return $query;
     }
+    public function products(){
+        return $this->belongsTo(Product::class, 'item_id', 'item_id');
+    }
 
+    
 }
